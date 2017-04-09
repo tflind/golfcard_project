@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Golf Score Card</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/styleSheet.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="../js/golf.js"></script>
+</head>
+<body onload="loadMe()">
+<div id="container">
+    <div class="contentDiv">
+        <div class="banner">
+            <h1>Golf Scorecard</h1>
+        </div>
+        <div id="courseData">
+            <select id="selectCourse" onchange="getCourseInfo(this.value)">
+                <option value="....">Select A Course Near You</option>
+            </select>
+            <select id="selectTeeBox" onchange="setCourseInfo(this.value)">
+                <option value="..."> Tee Box</option>
+            </select>
+        </div>
+        <div id="scoreCard">
+            <div class="playerAddition">
+                <a class="btn btn-primary" href="javascript: addPlayer()">Add Player</a>
+            </div>
+            <div class ="leftbox"></div>
+            <div class ="rightbox"></div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
