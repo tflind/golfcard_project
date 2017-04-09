@@ -27,16 +27,20 @@
 #scoreCard {
     background-color: #ffffff;
     width: 100%;
-    height: 400px;
+    height: 200px;
 }
 .playerAddition{
     width: 100%;
 }
 
 .leftbox {
+    padding: 20px;
     float: left;
     width: 10%;
     color: red;
+}
+.playername {
+    padding: 3px;
 }
 
 .rightbox {
