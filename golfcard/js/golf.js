@@ -1,4 +1,4 @@
-var numPlayers = 4;
+var numPlayers = 1;
 var numHoles = 18;
 var httpRequest = new XMLHttpRequest();
 var coursesNearMe;
@@ -25,7 +25,6 @@ function getCourseInfo(id) {
                 $("#selectTeeBox").append(teeBox);
             }
         }
-
     };
     httpRequest.open("GET","https://golf-courses-api.herokuapp.com/courses/" + id,true);
     httpRequest.send();
@@ -34,11 +33,12 @@ function getCourseInfo(id) {
 
 function setCourseInfo(teeboxid) {
     buildScoreCard(teeboxid);
+    addPlayer(teeboxid);
 }
 
 function buildScoreCard (){
     for(var c =1; c<= numHoles; c++){
-        $(".rightbox").append("<div class='col" + c + "'><div class='colheader'>Hole " + c +" </div></div>");
+        $(".rightbox").append("<div class='col" + c + "'><div class='colheader'> Hole " + c +"</div></div>");
         }
 };
 
@@ -46,7 +46,7 @@ function addPlayer(){
     for(var p = 1; p <= numPlayers; p++){
         $(".leftbox").append("<div class ='playername'>Player " + p + "</div>");
         for(var h = 1; h <= numHoles; h++){
-            $(".col" + h).append("<input class='scorebox' type='text' id='player"+ p+"hole" + h+"'/>");
+            $(".col" + h).append("<input class='scorebox' type='text' id='player"+ p +"hole" + h +"'/>");
         }
     }
 };
