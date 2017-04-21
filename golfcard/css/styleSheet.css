@@ -27,34 +27,64 @@
 #scoreCard {
     background-color: #ffffff;
     width: 100%;
-    height: 200px;
+    height: 276px;
 }
 .playerAddition{
     width: 100%;
 }
 
-.leftbox {
-    padding: 20px;
+#leftbox {
+    padding-left: 20px;
+    padding-top: 16px;
     float: left;
     width: 10%;
     color: red;
 }
+#coursebox{
+    padding-left: 20px;
+    padding-right: 20px;
+    float: left;
+    width: 10%;
+    color: red;
+    flex-direction: column;
+    text-align: center;
+
+}
+#rightcoursebox{
+    display: flex;
+    width: 90%;
+    float: right;
+    flex-direction: column;
+}
 .playername {
-    padding: 3px;
+    padding: 4px;
 }
 
-.rightbox {
+#rightbox {
     display: flex;
-    float: right;
+    flex-direction: column;
     width: 90%;
     color: red;
+    padding: 5px;
+}
+.holedisplay {
+    display: flex;
+    width: 100%;
+    color: green;
 }
 .scorebox {
     width: 30px;
+    display: flex;
+
 }
 .container {
     display: flex;
 }
 .colheader {
     text-align: center;
+}
+.datastyle{
+    text-align: center;
+    width: 30px;
+    padding-left: 10px;
 }
